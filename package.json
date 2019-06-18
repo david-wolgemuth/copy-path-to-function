@@ -1,0 +1,39 @@
+{
+	"name": "copy-path-of-function",
+	"displayName": "Copy Path of Function",
+	"description": "Copy relative / absolute path, including class and function",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.copyPathToFunction"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.copyPathToFunction",
+				"title": "Copy Path To Function"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"publisher": "david",
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"eslint": "^5.13.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"clipboardy": "^2.1.0"
+	}
+}
